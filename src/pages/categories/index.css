@@ -1,0 +1,62 @@
+.foodDivBackground {
+  height: 400px;
+  background-image: url(../../assests/foodBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.beltsDivBackground {
+  height: 400px;
+  background-image: url(../../assests/beltBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.healthCareDivBackground {
+  height: 400px;
+  background-image: url(../../assests/healthCareBackground.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.mainDivWave img {
+  margin-top: -10%;
+  width: 100%;
+}
+.foodDivBackground h1 {
+  font-size: 80px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif !important;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10%;
+  color: white;
+}
+.beltsDivBackground h1 {
+  font-size: 80px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif !important;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10%;
+  color: white;
+}
+
+.healthCareDivBackground h1 {
+  font-size: 80px;
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif !important;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10%;
+  color: white;
+}
+
+.cardMainClass {
+  justify-content: center;
+}
+.cardMainClass .container {
+  margin-top: 5%;
+}
+.cardClass {
+}
+.row {
+  justify-content: center;
+}
+.card {
+  margin: 0px auto;
+}

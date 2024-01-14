@@ -1,0 +1,32 @@
+.mainNavBar a {
+  font-family: "Nunito Sans", Arial, Helvetica, sans-serif !important;
+  font-size: 17px;
+  font-weight: 700;
+  color: black;
+}
+.mainNavBar img {
+  width: 30%;
+}
+.mainNavBar .dropdown-menu {
+  /* display: flex !important; */
+  margin-left: -10% !important;
+  overflow-y: scroll;
+  height: 200px;
+}
+.mainNavBar .dropdown-menu a {
+  font-size: 14px !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  margin: 0px 3%;
+}
+@media (min-width: 991px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    margin: 0px 4%;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    /* display: flex!important; */
+    /* flex-basis: auto; */
+    flex: none;
+    margin-right: 20%;
+  }
+}

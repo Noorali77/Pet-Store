@@ -1,0 +1,106 @@
+.footer-div {
+  margin-top: 10%;
+  margin-bottom: 3%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100% !important;
+}
+
+.footer-div .img {
+  padding: 0% 0% 0 10%;
+}
+.footer-div .img img {
+  padding-bottom: 15px;
+  width: 50%;
+}
+.footer-div .img p {
+  text-align: left;
+  font: normal normal bold 25px/31px "Nunito Sans", Arial, Helvetica, sans-serif !important;
+
+  letter-spacing: 2.5px;
+  color: black;
+  opacity: 1;
+}
+.footer-div .img .logo-div {
+  display: flex;
+}
+.footer-div .img .logo-div img {
+  width: 40%;
+  padding: 0px 2%;
+}
+.footer-div .img .logo-div img:hover {
+  cursor: pointer;
+}
+.footer-div .second {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+.footer-div .second p {
+  text-align: center;
+  font: normal normal normal 15px "Nunito Sans", Arial, Helvetica, sans-serif !important;
+  letter-spacing: 0px;
+  color: black;
+  opacity: 1;
+}
+.footer-div .third {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  text-align: right;
+  padding: 3% 5% 0 0%;
+}
+.footer-div .third p {
+  font: normal normal normal 25px/44px "Nunito Sans", Arial, Helvetica,
+    sans-serif !important;
+  letter-spacing: 0px;
+  color: black;
+}
+.footer-div .third img {
+  width: 8%;
+  margin-left: 7%;
+}
+.footer-div .third img:hover {
+  cursor: pointer;
+}
+.footer-div .list {
+  font: normal normal normal 25px/44px "Nunito Sans", Arial, Helvetica,
+    sans-serif !important;
+  color: black;
+  margin-top: 5%;
+}
+.footer-div .list ul {
+  list-style: none;
+  display: inline-block;
+}
+.footer-div .list li a {
+  cursor: pointer;
+}
+.footer-div a {
+  color: unset;
+  text-decoration: none;
+}
+.footer-div .footerHide {
+  display: none;
+}
+.termsAndCondition {
+  font: normal normal normal 15px/25px "Nunito Sans", Arial, Helvetica,
+    sans-serif !important;
+  color: black;
+  display: flex;
+  justify-content: end;
+  margin-top: auto;
+  padding-bottom: 15px;
+  padding-top: 5%;
+}
+
+.termsAndCondition a {
+  text-decoration: underline;
+  padding-left: 5%;
+}
+
+.termsAndCondition a:hover {
+  font: normal normal normal 15px/25px "Nunito Sans", Arial, Helvetica,
+    sans-serif !important;
+  color: #f42c49;
+}
