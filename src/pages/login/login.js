@@ -37,6 +37,7 @@ function Login() {
         // const docSnap = await getDoc(docRef);
         // const user_data = docSnap.data();
         localStorage.setItem("token", JSON.stringify(token));
+        toast.success("Login Successfull");
         // try {
         // } catch (error) {
         // }

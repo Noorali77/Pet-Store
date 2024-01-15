@@ -25,7 +25,9 @@ function Signup() {
     try {
       const a = await firebaseInstance.signUp(formValue);
       toast.success("Account created");
-      history.push("/login");
+      setTimeout(() => {
+        history.push("/login");
+      }, 2000);
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         toast.error("Email is already in use. Please use a different email.");

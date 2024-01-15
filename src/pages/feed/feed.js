@@ -164,6 +164,7 @@ function Feed({ selectedCategory }) {
             onClick={() => {
               setopenModal(true);
             }}
+            className="text-light"
           >
             Add Advertisment
           </Nav.Link>
