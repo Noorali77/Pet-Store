@@ -2,17 +2,18 @@ import { doc, getDoc } from "firebase/firestore";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import firebaseInstance, { db } from "../../firebase";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "../../firebase.config";
 
-import "./login.css";
+import "../login/login.css";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const initialState = {
   email: "",
-  password: "",
 };
-function Login() {
+function ForgetPassword() {
   const [formValue, setFormValue] = useState(initialState);
   const history = useHistory();
   const onHandleChange = (e) => {
@@ -29,27 +30,21 @@ function Login() {
       toast.error("Please provide a valid email.");
       return;
     }
-    firebaseInstance
-      .login(formValue)
-      .then(async (cred) => {
-        const token = cred.user.accessToken;
-        // const docRef = doc(db, "users", cred.user.uid);
-        // const docSnap = await getDoc(docRef);
-        // const user_data = docSnap.data();
-        localStorage.setItem("token", JSON.stringify(token));
-        toast.success("Login Successfull");
-        // try {
-        // } catch (error) {
-        // }
-        // toast.success("Login Successfully")
+    sendPasswordResetEmail(auth, formValue.email)
+      .then(() => {
+        // Password reset email sent successfully
+        toast.success("Password reset email sent");
+
         setTimeout(() => {
-          if (localStorage.getItem("token")) {
-            history.push("/posts");
-          }
+          history.push("/login");
         }, 2000);
       })
+      .catch((error) => {
+        // Handle errors, such as invalid email or user not found
+        console.error("Error sending password reset email", error);
+      })
       .catch((err) => {
-        toast.error("Login Failed");
+        toast.error("Sorry! Something went wrong");
         return;
       });
   };
@@ -59,7 +54,7 @@ function Login() {
 
       <form onSubmit={onFormSubmit} className="Auth-form">
         <div className="Auth-form-content">
-          <h3 className="Auth-form-title">Sign In</h3>
+          <h3 className="Auth-form-title">Forget Password</h3>
           <div className="form-group mt-3">
             <label>Email address</label>
             <input
@@ -70,33 +65,16 @@ function Login() {
               onChange={onHandleChange}
             />
           </div>
-          <div className="form-group mt-3">
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              onChange={onHandleChange}
-              className="form-control mt-1"
-              placeholder="Enter password"
-            />
-          </div>
-          <div>
-            <p className="forgot-password  mt-2">
-              <a href="/forgetPassword">Forget Password</a>
-            </p>
-          </div>
+
           <div className="d-grid gap-2 mt-3">
             <button type="submit" className="btn btn-primary">
               Submit
             </button>
           </div>
-          <p className="forgot-password  mt-2">
-            Have no account? <a href="/signup">Signup</a>
-          </p>
         </div>
       </form>
     </div>
   );
 }
 
-export default Login;
+export default ForgetPassword;

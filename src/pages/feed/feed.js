@@ -153,7 +153,7 @@ function Feed({ selectedCategory }) {
           width: "100%", // Add this line to ensure full width
           backgroundColor: "#dbe1e3", // Glass-like background color
           backdropFilter: "blur(10px)",
-          bottom: 0,
+          top: "70px",
           color: "green",
         }}
         activeKey="/home"

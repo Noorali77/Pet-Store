@@ -17,6 +17,7 @@ import Signup from "../pages/signup/signup";
 import Feed from "../pages/feed/feed";
 import ProtectedRoutes from "./protectedRoutes";
 import NavbarMain from "../components/navbar/navbar";
+import ForgetPassword from "../pages/forgetPassword";
 
 export default function AppRouting(props) {
   const { selectedCategory, setSelectedCategory } = props;
@@ -57,6 +58,10 @@ export default function AppRouting(props) {
               selectedCategory={selectedCategory}
               setSelectedCategory={setSelectedCategory}
             />
+          </ProtectedRoutes>
+
+          <ProtectedRoutes path="/forgetPassword">
+            <ForgetPassword />
           </ProtectedRoutes>
 
           <Route path="*">
